@@ -31,6 +31,13 @@ public class MainActivity extends AppCompatActivity {
 //        getSupportActionBar().hide();
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         setContentView(R.layout.activity_main);
+
+
+        getData();
+
+
+
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -69,5 +76,10 @@ public class MainActivity extends AppCompatActivity {
             webView.loadData(URL, "text/html", "UTF-8");  // load the webview
             return true;
         }
+    }
+
+    public void getData()
+    {
+        String prem = "Prem";
     }
 }
